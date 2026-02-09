@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Gabriela 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff5f9e, #ff8dc7, #ffc3e6);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      font-size: 1.3em;
+      max-width: 700px;
+      animation: fadeIn 3s ease;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #ff4f9a;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    iframe {
+      margin-top: 30px;
+      border-radius: 15px;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>Hola Gabriela 💖</h1>
+  <p>
+    Feliz San Valentín ✨<br><br>
+    Si estás leyendo esto es porque quería hacer algo diferente…  
+    algo que te saque una sonrisa,  
+    y que te recuerde lo mucho que significas para mí.
+  </p>
+  <button onclick="nextSection()">Sigue leyendo 😏</button>
+</section>
+
+<section>
+  <h1>Un poquito cursi, un poquito real 💕</h1>
+  <p>
+    Desde que llegaste a mi vida,  
+    todo tiene más color, más risas  
+    y más momentos que quiero repetir contigo.<br><br>
+    Aunque a veces seamos un caos  
+    (y aunque tú digas que siempre tienes la razón 😅),  
+    me encanta TODO de nosotros.
+  </p>
+  <button onclick="nextSection()">Ok, continúa 💘</button>
+</section>
+
+<section>
+  <h1>Esta canción dice mucho 🎶</h1>
+  <p>
+    Antes de seguir…  
+    escucha esto con calma 💞
+  </p>
+
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/1z0c0n7VZec?autoplay=0"
+    title="Te amé en mis sueños"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <button onclick="nextSection()">Ahora sí… 💖</button>
+</section>
+
+<section>
+  <h1>Para ti, Gabriela 🌹</h1>
+  <p>
+    No sé qué nos depare el futuro,  
+    pero sí sé algo con certeza:<br><br>
+    te elijo hoy,  
+    te elijo mañana,  
+    y te elegiría en todos mis sueños.<br><br>
+    Gracias por existir,  
+    gracias por ser tú.<br><br>
+    ❤️ Feliz San Valentín ❤️
+  </p>
+</section>
+
+<script>
+  let current = 0;
+  const sections = document.querySelectorAll("section");
+
+  function nextSection() {
+    current++;
+    if (current < sections.length) {
+      sections[current].scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+  }
+
+  setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
