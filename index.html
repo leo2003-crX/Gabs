@@ -215,14 +215,22 @@ img {
 
 <script>
 function next(btn) {
-  navigator.vibrate([60]);
+  try {
+    if (navigator.vibrate) navigator.vibrate([60]);
+  } catch(e) {}
   btn.closest("section").nextElementSibling.scrollIntoView({behavior:"smooth"});
 }
 
 function accept(type) {
-  navigator.vibrate([200,100,200,100,300]);
+  // Vibración segura
+  try {
+    if (navigator.vibrate) navigator.vibrate([200,100,200,100,300]);
+  } catch(e) {}
+
+  // Corazones
   for(let i=0;i<35;i++) createHeart();
 
+  // Texto final
   document.getElementById("finalText").innerHTML = `
     No quería cerrar esto sin decirlo claro,  
     sin adornos,  
@@ -239,8 +247,10 @@ function accept(type) {
     <strong style="font-size:1.6em;">Te amo, Gabriela ❤️</strong>
   `;
 
-  document.getElementById("final").classList.remove("hidden");
-  document.getElementById("final").scrollIntoView({behavior:"smooth"});
+  // Mostrar sección final
+  const finalSection = document.getElementById("final");
+  finalSection.classList.remove("hidden");
+  finalSection.scrollIntoView({behavior:"smooth"});
 }
 
 function createHeart() {
