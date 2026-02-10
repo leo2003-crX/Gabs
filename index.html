@@ -1,166 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Para Gabriela 💖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Para Gabriela 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff4d6d, #ff8fab, #ffc2d1);
-      color: white;
-      text-align: center;
-      overflow-x: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff4d6d, #ff8fab, #ffc2d1);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-    section {
-      min-height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+section {
+  min-height: 100vh;
+  padding: 70px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    h1 {
-      font-size: 2.6em;
-      margin-bottom: 20px;
-      animation: fadeUp 2s ease;
-    }
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 35px;
+}
 
-    p {
-      font-size: 1.3em;
-      max-width: 800px;
-      line-height: 1.6;
-      animation: fadeUp 2.8s ease;
-    }
+p {
+  font-size: 1.35em;
+  max-width: 920px;
+  line-height: 2.1;
+}
 
-    button {
-      margin-top: 35px;
-      padding: 15px 35px;
-      font-size: 1.1em;
-      border: none;
-      border-radius: 40px;
-      background: white;
-      color: #ff4d6d;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+button {
+  margin-top: 50px;
+  padding: 18px 45px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: #ff4d6d;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
 
-    button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-    }
+iframe {
+  margin-top: 40px;
+  border-radius: 25px;
+  max-width: 95%;
+}
 
-    iframe {
-      margin-top: 30px;
-      border-radius: 20px;
-      max-width: 90%;
-    }
+img {
+  max-width: 90%;
+  border-radius: 35px;
+  margin-top: 50px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+}
 
-    img {
-      max-width: 80%;
-      border-radius: 25px;
-      margin-top: 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      animation: fadeUp 2.5s ease;
-    }
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 26px;
+  animation: floatUp 7s linear infinite;
+  pointer-events: none;
+}
 
-    .heart {
-      position: fixed;
-      bottom: -20px;
-      font-size: 24px;
-      animation: floatUp 7s linear infinite;
-      opacity: 0.8;
-      pointer-events: none;
-    }
+@keyframes floatUp {
+  to { transform: translateY(-150vh); opacity: 0; }
+}
 
-    @keyframes floatUp {
-      from { transform: translateY(0); opacity: 1; }
-      to { transform: translateY(-120vh); opacity: 0; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+.hidden { display:none; }
+</style>
 </head>
 
 <body>
 
 <section>
-  <h1>Hola Gabriela 💖</h1>
+  <h1>Gabriela 💖</h1>
   <p>
-    Si estás leyendo esto es porque alguien  
-    pensó en ti con mucho amor 😌✨<br><br>
-    Quería hacer algo diferente,  
-    algo que no se borre con el tiempo,  
-    algo que puedas abrir y sentir.
+    Si estás leyendo esto, quiero que lo hagas con calma.  
+    No es un texto corto ni una frase bonita lanzada al aire.  
+    Es algo que nace de pensar, de sentir y de detenerme un momento  
+    para escribir lo que normalmente se queda guardado.  
+
+    Nada de lo que hay aquí fue hecho rápido.  
+    Todo fue pensado para que lo leas sin prisa,  
+    como se leen las cosas que importan de verdad,  
+    mientras una canción acompaña  
+    y el mundo se apaga un poco alrededor.
   </p>
-  <button onclick="goNext(this)">Sigue leyendo 😏</button>
+  <button onclick="next(this)">Empieza 🎶</button>
 </section>
 
 <section>
-  <h1>Un poco cursi… pero honesto 💕</h1>
+  <h1>Antes de seguir</h1>
   <p>
-    Desde que llegaste a mi vida,  
-    todo cambió para bien.<br><br>
-    Me hiciste reír cuando estaba serio,  
-    me diste calma cuando todo iba rápido  
-    y me enseñaste que el amor  
-    también se construye en los pequeños momentos y con paciencia.<br><br>
-    Y sí… a veces es loco,  
-    pero incluso en eso, te elijo.
-  </p>
-  <button onclick="nextSection()">No te vayas 💘</button>
-</section>
+    Dale play a la canción.  
+    No solo porque me gusta,  
+    sino porque dice cosas que yo siento  
+    incluso cuando no las digo.  
 
-<section>
-  <h1>Momento importante 🎶</h1>
-  <p>
-    Antes de seguir…<br>
-    dale play a esta canción.<br><br>
-    Escúchala con calma,  
-    porque cada palabra  
-    tiene un pedacito de lo que siento por ti 💞
+    Después baja despacio.  
+    Como si cada palabra tuviera su tiempo.  
+    Como si no hubiera nada más urgente  
+    que este momento.
   </p>
 
   <iframe width="560" height="315"
     src="https://www.youtube.com/embed/y2VrlY9x9nc"
     title="Te amé en mis sueños"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
 
-  <button onclick="nextSection()">Sigue… 💖</button>
+  <button onclick="next(this)">Estoy escuchando 💞</button>
 </section>
 
-<!-- SECCIÓN NUEVA -->
 <section>
-  <h1>¿Lista? 😌💘</h1>
   <p>
-    Porque esto no es solo una página…<br>
-    es un pedacito de lo nuestro.<br><br>
-    Un recuerdo,  
-    un sentimiento,  
-    y todo lo que aún nos queda por vivir juntos 💞
+    Desde que llegaste a mi vida,  
+    muchas cosas empezaron a acomodarse sin que yo las forzara.  
+    No fue un cambio repentino ni exagerado,  
+    fue más bien silencioso,  
+    como cuando algo encuentra su lugar  
+    y deja de hacer ruido.  
+
+    Contigo entendí que no todo tiene que ser intenso para ser real,  
+    que el amor no siempre se demuestra con grandes gestos,  
+    a veces se demuestra quedándose,  
+    acompañando,  
+    estando incluso cuando no hay nada que decir.
   </p>
-
-  <!-- CAMBIA EL NOMBRE DE LA IMAGEN AQUÍ -->
-  <img src="gabriela.JPG" alt="Nosotros">
-
-  <button onclick="nextSection()">Una cosita más… 🌹</button>
 </section>
 
 <section>
-  <h1>Gabriela 🌹</h1>
   <p>
-    No prometo ser perfecto,<br>
-    pero sí prometo elegirte.<br><br>
-    Elegirte en los días buenos,  
-    en los días
+    Me gusta cómo eres cuando no intentas ser nada más.  
+    Me gusta tu forma de hablar,  
+    tu forma de reaccionar,  
+    tu forma de quedarte incluso cuando podrías irte.  
+
+    Me gusta saber que contigo puedo bajar la guardia,  
+    que no tengo que explicar cada silencio,  
+    que no todo tiene que resolverse en el momento,  
+    porque incluso en la pausa  
+    hay tranquilidad y confianza.
+  </p>
+</section>
+
+<section>
+  <p>
+    No te prometo una historia perfecta,  
+    porque la perfección no existe y tampoco la busco.  
+
+    Lo que sí quiero es algo honesto,  
+    algo que se construya con días buenos y días difíciles,  
+    con conversaciones largas y otras incompletas,  
+    con risas, con cansancio, con paciencia.  
+
+    Y aun así,  
+    en medio de todo eso,  
+    quiero seguir eligiéndote.
+  </p>
+</section>
+
+<section>
+  <p>
+    Elegirte cuando todo va bien.  
+    Elegirte cuando no entendemos todo.  
+    Elegirte incluso cuando el día pesa un poco más.  
+
+    Porque contigo aprendí que amar  
+    no siempre es emoción constante,  
+    a veces es calma,  
+    a veces es compañía,  
+    a veces es simplemente quedarse  
+    cuando sería más fácil irse.
+  </p>
+</section>
+
+<section>
+  <h1>Por eso…</h1>
+  <p>
+    Esto no es solo una página.  
+    No es solo un detalle bonito.  
+
+    Es una invitación real.  
+    A compartir tiempo.  
+    A crear recuerdos.  
+    A seguir escribiendo algo que no tiene apuro,  
+    pero sí intención,  
+    y muchas ganas de existir.
+  </p>
+</section>
+
+<section>
+  <img src="gabriela.jpg" alt="Nuestra invitación">
+</section>
+
+<section>
+  <h1>¿Aceptas esta invitación?</h1>
+  <div style="display:flex; gap:30px; flex-wrap:wrap; justify-content:center;">
+    <button onclick="accept('si')">Sí 💖</button>
+    <button onclick="accept('obvio')">Sí obvio 😌</button>
+  </div>
+</section>
+
+<section id="final" class="hidden">
+  <h1>Y antes de terminar…</h1>
+  <p id="finalText"></p>
+</section>
+
+<script>
+function next(btn) {
+  navigator.vibrate([60]);
+  btn.closest("section").nextElementSibling.scrollIntoView({behavior:"smooth"});
+}
+
+function accept(type) {
+  navigator.vibrate([200,100,200,100,300]);
+  for(let i=0;i<35;i++) createHeart();
+
+  document.getElementById("finalText").innerHTML = `
+    No quería cerrar esto sin decirlo claro,  
+    sin adornos,  
+    sin rodeos.<br><br>
+
+    Lo que siento por ti no es casual,  
+    no es pasajero,  
+    y no es algo que tome a la ligera.<br><br>
+
+    Es algo que cuido,  
+    que pienso,  
+    y que elijo cada día.<br><br>
+
+    <strong style="font-size:1.6em;">Te amo, Gabriela ❤️</strong>
+  `;
+
+  document.getElementById("final").classList.remove("hidden");
+  document.getElementById("final").scrollIntoView({behavior:"smooth"});
+}
+
+function createHeart() {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerText = Math.random() > .5 ? "💖" : "💘";
+  h.style.left = Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),7000);
+}
+
+setInterval(createHeart, 350);
+</script>
+
+</body>
+</html>
